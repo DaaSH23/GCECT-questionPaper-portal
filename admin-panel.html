@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <!--fonts    -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;500&family=Rubik:wght@600;700&display=swap');
+    </style>
+    <style>
+        body{
+            background-color: #dcf9ff;
+        }
+        .hed{
+            margin-top: 5rem;
+            text-align: center;
+            font-family: 'Rubik', sans-serif;
+            color: #054782;
+        }
+        .container{
+            margin-top: 5rem;
+            border-style: solid;
+            border-radius:10px;
+            background:white;
+        }
+        .row{
+            font-family: 'Karla', sans-serif;
+            font-weight:500;
+            font-size:20px;
+            color: #054782;
+            padding-top: 2rem;
+            border-spacing: 10px;
+        }
+        .upload{
+            font-family: 'Karla', sans-serif;
+            font-weight:500;
+            padding-top: 3rem;
+            padding-left: 2rem;
+            padding-bottom: 3rem;
+        }
+        .ssi{
+            text-align:right;
+        }
+        .ssu{
+            color:#9efae0;
+            border-radius:30px;
+            font-size:25px;
+            text-align:left;
+            /*margin-left:-10rem;*/
+        }
+        .ssu input{
+            background:#dcf9ff;
+            border-radius:10px;
+            padding:3px 8px ;
+        }
+        
+        @media only screen and (max-width: 500px){
+            /*.container{*/
+            /*    margin-top:-1px;*/
+            /*}*/
+            .pm.col-sm-6{
+                margin-top:3rem;
+            }
+            .upload{
+                padding-top: 1rem;
+                padding-bottom: 3rem;
+            }
+            .semis{
+                margin-top:1rem;
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <div class="hed">
+        <h1>ADMIN - PANEL</h1>
+    </div>
+
+    <div class="arer">
+        <div class="pr-form">
+            <form action="insert.php" method="POST" enctype="multipart/form-data">
+                <div class="container">
+                    <div class="row text-center">
+                        <div class="col-6 col-sm-4">
+                            <label for="course">Course : </label>
+                            <select name="course" id="course" required>
+                                <option value="btech">B.TECH</option>
+                                <option value="mtech">M.TECH</option>
+                            </select>
+                        </div>
+                        <div class="col-6 col-sm-4">
+                            <label for="dept">Dept. : </label>
+                            <select name="dept" id="dept" required>
+                                <option value="CSE">CSE</option>
+                                <option value="IT">IT</option>
+                                <option value="Ceramic">Ceramic</option>
+                            </select>
+                        </div>
+                        <div class="col-6 col-sm-4 semis">
+                            <label for="sem">Sem : </label>
+                            <select name="sem" id="sem" required>
+                                <option value="1">I</option>
+                                <option value="2">II</option>
+                                <option value="3">III</option>
+                                <option value="4">IV</option>
+                                <option value="5">V</option>
+                                <option value="6">VI</option>
+                                <option value="7">VII</option>
+                                <option value="8">VIII</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row text-center">
+                        <div class="col-6 col-sm-4">
+                            <label for="term">Term : </label>
+                            <select name="term" id="term" required>
+                                <option value="mid1">Mid-Term 1</option>
+                                <option value="mid2">Mid-Term 2</option>
+                                <option value="end">End-Sem</option>
+                            </select>
+                        </div>
+                        <div class="col-6 col-sm-4">
+                            <label for="year">Year : </label>
+                            <select name="year" id="year" required>
+                                <option value="2021">2021</option>
+                                <option value="2020">2020</option>
+                                <option value="2019">2019</option>
+                                <option value="2018">2018</option>
+                                <option value="2017">2017</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row text-center">
+                        <div class="col-12 col-sm-6">
+                            <label for="sub">PaperCode:</label>
+                            <input id="sub" name="papercode" type="text" required>
+                        </div>
+                        <div class="col-12 col-sm-6 pm">
+                            <label for="nm">Paper-Name:</label>
+                            <input id="nm" name="papername" type="text" required>
+                        </div>
+                    </div>
+                    <div class="row text-center">
+                        <div class="col-12 col-sm-6 upload ssi">
+                            <input type="file" name="myfiles" required>
+                            <!-- <button type="submit" id="upld">Upload</button> -->
+                        </div>
+                        <div class="col-12 col-sm upload ssu">
+                            <input type="Submit" name="upld" value="Submit">
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+</body>
+</html>
