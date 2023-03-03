@@ -10,9 +10,9 @@ $Year = $_POST['year'];
 if(!empty($Course) || !empty($Dept) || !empty($Sem) || !empty($Term) || !empty($Year)) {
 
     $host = "localhost";
-    $dbUsername = "id19885247_gcect";
-    $dbPassword = "C7|s2Gi1GfahxDPQ";
-    $dbname = "id19885247_prevweb123";
+    $dbUsername = "root";
+    $dbPassword = "";
+    $dbname = "prevquestions";
 
     //create connection
     $conn = new mysqli($host, $dbUsername, $dbPassword, $dbname);

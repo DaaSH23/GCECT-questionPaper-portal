@@ -19,12 +19,11 @@ move_uploaded_file($file,$destination);
 
 
 
-
 if(!empty($course) || !empty($dept) || !empty($sem) || !empty($term) || !empty($year) || !empty($papercode) || !empty($filename) || !empty($papername)) {
     $host = "localhost";
-    $dbUsername = "id19885247_gcect";
-    $dbPassword = "C7|s2Gi1GfahxDPQ";
-    $dbname = "id19885247_prevweb123";
+    $dbUsername = "root";
+    $dbPassword = "";
+    $dbname = "prevquestions";
 
     //create connection
     $conn = new mysqli($host, $dbUsername, $dbPassword, $dbname);
