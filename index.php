@@ -89,44 +89,49 @@ if(isset($_GET['file_id'])) {
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Pacifico&family=Roboto:wght@700&family=Scada:wght@700&family=Source+Code+Pro:wght@500&family=Ubuntu:wght@700&family=Yanone+Kaffeesatz:wght@700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <link href="design.css" rel="stylesheet">
+    
+    <!-- custom css file  -->
+    <link href="./styles/index.css" rel="stylesheet">
 </head>
 <body>
+    <div class="container">
     <div class="nav">
-        <a id="admin" href="admin.html" >ADMIN LOGIN</a>
+        <a id="admin" href="admin.html" class="login_btn mt-4">ADMIN LOGIN</a>
     </div>
     <div class="hed">
         <h2>GOVERNMENT COLLEGE OF ENGINEERING AND CERAMIC TECHNOLOGY</h2>
         <h4>(An Autonomus Institute under MAKAUT, NAAC accredited A Grade)</h4>
         <h2>Previous Year Question Papers</h2>
     </div>
+    </div>
     
-    <div class="container tabel tbh">
+    <div class="container tabel">
         <table class="table">
             <thead class="frm">
-                <tr>
+                <tr class="form_container">
                     <div class="pr-form">
                         <form action = "/index.php" method = "post" > 
-                            <th scope="col">
-                                <label for="course">Course : </label>
-                                    <select name="course" id="course">
-                                        <option value="btech" selected>B.TECH</option>
+                            <th scope="col" class="field_container">
+                                <label for="course" class="input_label">Course : </label>
+                                    <select name="course" id="course" class="input_field">
+                                        <option value="null" selected>-Select-</option>
+                                        <option value="btech">B.TECH</option>
                                         <option value="mtech">M.TECH</option>
                                     </select>
                             </th>
-                            <th scope="col">
-                                <label for="department">Dept. : </label>
-                                <select name="dept" id="department">
-                                    <option value="null" selected>-</option>
+                            <th scope="col" class="field_container border-right">
+                                <label for="department" class="input_label">Dept. : </label>
+                                <select name="dept" id="department" class="input_field">
+                                    <option value="null" selected>-Select-</option>
                                     <option value="cse">CSE</option>
                                     <option value="IT">IT</option>
                                     <option value="Ceramic">Ceramic</option>
                                 </select>
                             </th>
-                            <th scope="col">
-                                <label for="sem">Sem : </label>
-                                <select name="sem" id="sem">
-                                    <option value="0" selected>-</option>
+                            <th scope="col" class="field_container border-right">
+                                <label for="sem" class="input_label">Sem : </label>
+                                <select name="sem" id="sem" class="input_field">
+                                    <option value="0" selected>-Select-</option>
                                     <option value="1">I</option>
                                     <option value="2">II</option>
                                     <option value="3">III</option>
@@ -137,19 +142,19 @@ if(isset($_GET['file_id'])) {
                                     <option value="8">VIII</option>
                                 </select>
                             </th>
-                            <th scope="col">
-                                <label for="term">Term : </label>
-                                <select name="term" id="term">
-                                    <option value="null" selected>-</option>
+                            <th scope="col" class="field_container border-right">
+                                <label for="term" class="input_label">Term : </label>
+                                <select name="term" id="term" class="input_field">
+                                    <option value="null" selected>-Select-</option>
                                     <option value="mid1">Mid-Term 1</option>
                                     <option value="mid"2>Mid-Term 2</option>
                                     <option value="end">End-Sem</option>
                                 </select>
                             </th>
-                            <th scope="col">
-                                <label for="year">Year : </label>
-                                <select name="year" id="year">
-                                    <option value="null" selected>-</option>
+                            <th scope="col" class="field_container border-right">
+                                <label for="year" class="input_label">Year : </label>
+                                <select name="year" id="year" class="input_field">
+                                    <option value="null" selected>-Select-</option>
                                     <option value="2021">2021</option>
                                     <option value="2020">2020</option>
                                     <option value="2019">2019</option>
@@ -157,16 +162,15 @@ if(isset($_GET['file_id'])) {
                                     <option value="2017">2017</option>
                                 </select>
                             </th>
-                            <th scope="col">
-                                <button name="sub" id="sub" type="submit" submitted>Search</button>
+                            <th scope="col" class="field_container border-right">
+                                <button name="sub" id="sub" type="submit" class="search_btn" submitted>Search</button>
                             </th>
                         </form>
                     </div>
                 </tr>
             </thead>
-            <thead>
+            <!-- <thead>
               <tr>
-                <!-- <th scope="col">no.</th> -->
                 <th scope="col">Course</th>
                 <th scope="col">Stream</th>
                 <th scope="col">PaperCode</th>
@@ -174,7 +178,7 @@ if(isset($_GET['file_id'])) {
                 <th scope="col">Year</th>
                 <th scope="col">Download</th>
               </tr>
-            </thead>
+            </thead> -->
             <?php
                 if(mysqli_num_rows($result) > 0) {
                     while($row = mysqli_fetch_assoc($result)) {
