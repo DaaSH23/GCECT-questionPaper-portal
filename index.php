@@ -110,7 +110,7 @@ if(isset($_GET['file_id'])) {
             <thead class="frm">
                 <tr class="form_container">
                     <div class="pr-form">
-                        <form action = "/index.php" method = "post" > 
+                        <form action="index.php" method="POST" enctype="multipart/form-data" > 
                             <th scope="col" class="field_container">
                                 <label for="course" class="input_label">Course : </label>
                                     <select name="course" id="course" class="input_field">
@@ -169,7 +169,7 @@ if(isset($_GET['file_id'])) {
                     </div>
                 </tr>
             </thead>
-            <!-- <thead>
+            <thead>
               <tr>
                 <th scope="col">Course</th>
                 <th scope="col">Stream</th>
@@ -178,7 +178,7 @@ if(isset($_GET['file_id'])) {
                 <th scope="col">Year</th>
                 <th scope="col">Download</th>
               </tr>
-            </thead> -->
+            </thead>
             <?php
                 if(mysqli_num_rows($result) > 0) {
                     while($row = mysqli_fetch_assoc($result)) {
