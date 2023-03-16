@@ -176,7 +176,7 @@ if(isset($_GET['file_id'])) {
             </div>
         </form>
     </div>
-
+  
     <!-- Data Table -->
     <div class="container tabel table-responsive p-3">
         <table class="table table-striped table-bordered data_table">
