@@ -7,9 +7,10 @@ $Term = $_POST['term'];
 $Year = $_POST['year'];
 // $papercode = $_POST['papercode'];
 
+
 if(!empty($Course) || !empty($Dept) || !empty($Sem) || !empty($Term) || !empty($Year)) {
 
-    $host = "localhost";
+    $host = "";
     $dbUsername = "root";
     $dbPassword = "";
     $dbname = "prevquestions";
