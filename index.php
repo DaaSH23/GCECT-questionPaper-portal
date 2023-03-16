@@ -91,13 +91,15 @@ if(isset($_GET['file_id'])) {
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Pacifico&family=Roboto:wght@700&family=Scada:wght@700&family=Source+Code+Pro:wght@500&family=Ubuntu:wght@700&family=Yanone+Kaffeesatz:wght@700&display=swap"
         rel="stylesheet">
+
+    <!-- Bootstrap CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 
+    <!-- Font Awesome CDN  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
         integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-
 
     <!-- custom css file  -->
     <link href="./styles/index.css" rel="stylesheet">
@@ -115,6 +117,7 @@ if(isset($_GET['file_id'])) {
         </div>
     </div>
 
+    <!-- Input Search Form  -->
     <div class="container p-0">
         <form action="index.php" method="POST" enctype="multipart/form-data" class="search_form_container">
             <div class="input_container">
@@ -173,6 +176,8 @@ if(isset($_GET['file_id'])) {
             </div>
         </form>
     </div>
+
+    <!-- Data Table -->
     <div class="container tabel table-responsive p-3">
         <table class="table table-striped table-bordered data_table">
             <thead>
